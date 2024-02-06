@@ -1,7 +1,10 @@
 <script setup>
+defineProps(['message'])
 </script>
 
-<template></template>
+<template>
+  {{ message }}
+</template>
 
 <style scoped>
 </style>

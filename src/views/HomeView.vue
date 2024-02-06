@@ -1,9 +1,18 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import { ref } from 'vue';
+import InputAnnouncement from '@/components/InputAnnouncement.vue';
+import Announcement from '@/components/Announcement.vue';
+
+const announcement = ref();
+
+function updateAnnouncement(text) {
+  announcement.value = text;
+}
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <InputAnnouncement v-on:announcementPosted="updateAnnouncement"/>
+    <Announcement v-bind:message="announcement"/>
   </main>
 </template>

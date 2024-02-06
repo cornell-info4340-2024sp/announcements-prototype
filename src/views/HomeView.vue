@@ -1,16 +1,9 @@
 <script setup>
-import InputCount from '@/components/InputCount.vue';
-import Count from '@/components/Count.vue';
-
-import { ref } from 'vue';
-
-const count = ref(0);
+import TheWelcome from '../components/TheWelcome.vue'
 </script>
 
 <template>
   <main>
-    <InputCount v-on:increase-by="count++" />
-    <Count />
-    {{  count }}
+    <TheWelcome />
   </main>
 </template>
